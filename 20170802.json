@@ -1,0 +1,245 @@
+{
+	"version": 1,
+	"allow_edit": true,
+	"plugins": [],
+	"panes": [
+		{
+			"width": 1,
+			"row": {
+				"2": 1,
+				"3": 1,
+				"4": 11
+			},
+			"col": {
+				"2": 1,
+				"3": 1,
+				"4": 1
+			},
+			"col_width": "4",
+			"widgets": [
+				{
+					"type": "html",
+					"settings": {
+						"html": "content = '<center><h1 id=\"qhd-title\" style=\"font-size:15px;font-family: 华文仿宋,仿宋;color:#fff;\"></h1></center>';\nsetTimeout(function(){\n     $(\".light .ready .gs_w:not(.preview-holder)\").css({\"background\":\"transparent\",\"box-shadow\":\"none\"});\n     $(\".light .ready .gs_w:not(.preview-holder) header\").css({\"background\":\"transparent\",\"border\":\"none\"})\n},1)\nsetTimeout(function(){  \n     header = $(\"h1#qhd-title\").closest(\"section\").prev();\n     li = header.parent();\n     htmlWidget = $(\"h1#qhd-title\").closest(\".html-widget\");\n     $(htmlWidget).css(\"overflow\",\"visible\");\n     $(li).css({\"background\":\"transparent\",\"box-shadow\":\"none\",\"top\":\"-26px\"});\n     $(header).hide();\n    width = $(\"div#board-content\").width()-300-35;\n    if (width < 960){\n        $(\"li[data-sizex='3']\").css(\"width\",width+\"px\");\n    }else{\n        $(\"li[data-sizex='3']\").css(\"width\",\"960px\");\n    }\n},1) \n$(\".gridster.responsive-column-width.ready\").css(\"min-width\",\"1280px\");\nzoom = $(\"div#board-content\").width()/1280-0.1;\nif(zoom < 1){\n    $(\".gridster.responsive-column-width.ready\").css(\"zoom\",1) \n}else{\n    $(\".gridster.responsive-column-width.ready\").css(\"zoom\",zoom);\n}\n$(window).resize(function(){\n    zoom = $(\"div#board-content\").width()/1280-0.1;\n    width = $(\"div#board-content\").width()-300-30;\n    if(zoom < 1){\n        $(\".gridster.responsive-column-width.ready\").css(\"zoom\",1) \n    }else{\n        $(\".gridster.responsive-column-width.ready\").css(\"zoom\",zoom) \n    }\n    if (width < 960){\n    $(\"li[data-sizex='3']\").css(\"width\",width);\n    }else{\n        $(\"li[data-sizex='3']\").css(\"width\",\"960px\");\n    } \n    width = $(\"div#board-content\").width()-300-35;\n     if(width < 960){\n        headerLi = $(\"h1#qhd-title\").closest(\"section\").prev().parent();\n    \t$(headerLi).css(\"width\",\"1024px\");\n        margin = ($(\"#board-content\").width() - 1024)/2;\n     \t$(headerLi).css({\"width\":\"1024px\",\"left\":margin});\n     }\n})\nsetTimeout(function(){\n     headerLi = $(\"h1#qhd-title\").closest(\"section\").prev().parent();\n     width = $(\"div#board-content\").width()-300-35;\n     if(width < 960){\n        headerLi = $(\"h1#qhd-title\").closest(\"section\").prev().parent();\n        $(headerLi).css(\"width\",\"1024px\");\n        margin = ($(\"#board-content\").width() - 1024)/2;\n     \t$(headerLi).css({\"width\":\"1024px\",\"left\":margin});\n     }\n})\nreturn content",
+						"height": 1
+					}
+				}
+			]
+		},
+		{
+			"width": 1,
+			"row": {
+				"4": 1,
+				"5": 1
+			},
+			"col": {
+				"4": 2,
+				"5": 1
+			},
+			"col_width": "3",
+			"widgets": [
+				{
+					"type": "html",
+					"settings": {
+						"html": "html = '<div class=\"list-apps\"><a href=\"/workflow\" target=\"_parent\" style=\"float:left;width: 200px;margin:0px 15px;\">\\\n    <div class=\"card card-stats\">\\\n        <div class=\"card-header\" data-background-color=\"blue\">\\\n            <i class=\"ion ion-ios-list-outline\" style=\"color:#fff\"></i>\\\n        </div>\\\n        <div class=\"card-content\">\\\n            <p class=\"category\" style=\"display:none;\">Followers</p>\\\n            <h3 class=\"title\" style=\"color:#333\">公文管理</h3>\\\n        </div>\\\n        <div class=\"card-footer\">\\\n            <div class=\"stats\">\\\n                <span>文件拟写、公文处理、审批事项</span>\\\n            </div>\\\n        </div>\\\n    </div>\\\n</a>\\\n<a href=\"/cms\" target=\"_parent\" style=\"float:left;width: 200px;margin:0px 15px;\">\\\n    <div class=\"card card-stats\">\\\n        <div class=\"card-header\" data-background-color=\"orange\">\\\n            <i class=\"ion ion-ios-book-outline\" style=\"color:#fff\"></i>\\\n        </div>\\\n        <div class=\"card-content\">\\\n            <p class=\"category\" style=\"display:none;\">Followers</p>\\\n            <h3 class=\"title\" style=\"color:#333\">集团信息</h3>\\\n        </div>\\\n        <div class=\"card-footer\">\\\n            <div class=\"stats\">\\\n                <span>公告通知、帮助文档</span>\\\n            </div>\\\n        </div>\\\n    </div>\\\n</a>\\\n<a href=\"/calendar\" target=\"_parent\" style=\"float:left;width: 200px;margin:0px 15px;\">\\\n    <div class=\"card card-stats\">\\\n        <div class=\"card-header\" data-background-color=\"green\">\\\n            <i class=\"ion ion-ios-calendar-outline\" style=\"color:#fff\"></i>\\\n        </div>\\\n        <div class=\"card-content\">\\\n            <p class=\"category\" style=\"display:none;\">Followers</p>\\\n            <h3 class=\"title\" style=\"color:#333\">本周安排</h3>\\\n        </div>\\\n        <div class=\"card-footer\">\\\n            <div class=\"stats\">\\\n                <span>工作安排日程表</span>\\\n            </div>\\\n        </div>\\\n    </div>\\\n</a>\\\n<a href=\"/contacts\" target=\"_parent\" style=\"float:left;width: 200px;margin:0px 14px;\">\\\n    <div class=\"card card-stats\">\\\n        <div class=\"card-header\" data-background-color=\"green\">\\\n            <i class=\"ion ion-ios-people-outline\" style=\"color:#fff\"></i>\\\n        </div>\\\n        <div class=\"card-content\">\\\n            <p class=\"category\" style=\"display:none;\">Followers</p>\\\n            <h3 class=\"title\" style=\"color:#333\">通讯录</h3>\\\n        </div>\\\n        <div class=\"card-footer\">\\\n            <div class=\"stats\">\\\n                <span>帮助您记录管理人员信息</span>\\\n            </div>\\\n        </div>\\\n    </div>\\\n</a></div>';\nsetTimeout(function(){\n\tli = $(\".list-apps\").closest(\"section\").prev().parent();\n\t$(li).css(\"margin-top\",\"-20px\");\n},1)\nreturn html;",
+						"height": 4
+					}
+				}
+			]
+		},
+		{
+			"title": "",
+			"width": 1,
+			"row": {
+				"1": 1,
+				"2": 5,
+				"3": 5,
+				"4": 15,
+				"5": 1,
+				"6": 1,
+				"7": 1,
+				"8": 1,
+				"9": 1,
+				"10": 1
+			},
+			"col": {
+				"1": 1,
+				"2": 1,
+				"3": 1,
+				"4": 2,
+				"5": 1,
+				"6": 1,
+				"7": 1,
+				"8": 1,
+				"9": 1,
+				"10": 1
+			},
+			"col_width": "3",
+			"widgets": [
+				{
+					"type": "html",
+					"settings": {
+						"html": "reValue = '<div class=\"card callout-success\" style=\"width:49%;float:left\">\\\n\t<div class=\"card-header\" data-background-color=\"orange\">\\\n\t\t<h4 class=\"title\">待办公文</h4>\\\n\t</div>\\\n\t<div class=\"card-content table-responsive\">\\\n\t\t<table class=\"table table-hover\">\\\n\t\t\t<thead class=\"text-warning\" style=\"color:blue\">\\\n\t\t\t\t<tr>\\\n\t\t\t\t\t<th style=\"width:75%\"><div style=\"margin-left: 7px;\">标题</div></th>\\\n                \t<th><div>接收时间</div></th>\\\n\t\t\t\t</tr>\\\n            </thead>\\\n\t\t\t<tbody>\\\n\t\t\t\t%%\\\n\t\t\t</tbody>\\\n\t\t</table>\\\n\t</div>\\\n</div>\\\n<div class=\"card\" style=\"width:49%;float:right\">\\\n\t<div class=\"card-header\" data-background-color=\"blue\">\\\n\t\t<h4 class=\"title\">我的工作安排</h4>\\\n\t</div>\\\n\t<div class=\"card-content table-responsive\">\\\n\t\t<table class=\"table table-hover\">\\\n\t\t\t<thead class=\"text-warning\" style=\"color:blue\">\\\n\t\t\t\t<tr>\\\n\t\t\t\t\t<th style=\"width:75%\"><div>标题</div></th>\\\n                \t<th><div>开始时间</div></th>\\\n\t\t\t\t</tr>\\\n            </thead>\\\n\t\t\t<tbody>\\\n\t\t\t\t$$\\\n\t\t\t</tbody>\\\n\t\t</table>\\\n\t</div>\\\n</div>';\n\nvar listValue = datasources[\"hotoa_pending\"].data.map(function(instance,index){\n    if(index<5){\n    \tif(instance.is_read == false){\n\t\t\ticon = '<i class=\"ion ion-record\" style=\"font-size:80%;position:absolute;top:5px;left:-10px;color:#1f95ec;\"></i>';\n\t\t}else{\n\t\t\ticon = '';\n\t\t}\n\t\tif(instance.values){\n\t\t\tif(instance.values.priority == \"办文\"){\n\t\t\t\tcontentp = '<a style=\"display:inline-block;width:90%;margin-left:7px;color:blue;\" href=\"/workflow/space/'+instance.space_id+'/inbox/'+instance.id+'\" target=\"_parent\">'+instance.name+'</a>';   \n\t\t\t}else if(instance.values.priority == \"紧急\"){\n\t\t\t\tcontentp = '<a style=\"display:inline-block;width:90%;margin-left:7px;color:purple;\" href=\"/workflow/space/'+instance.space_id+'/inbox/'+instance.id+'\" target=\"_parent\">'+instance.name+'</a>';   \n\t\t\t}else if(instance.values.priority == \"特急\"){\n\t\t\t\tcontentp = '<a style=\"display:inline-block;width:90%;margin-left:7px;color:red;\" href=\"/workflow/space/'+instance.space_id+'/inbox/'+instance.id+'\" target=\"_parent\">'+instance.name+'</a>';   \n\t\t\t}else{\n\t\t\t\tcontentp = '<a style=\"display:inline-block;width:90%;margin-left:7px;\" href=\"/workflow/space/'+instance.space_id+'/inbox/'+instance.id+'\" target=\"_parent\">'+instance.name+'</a>';\n\t\t\t}\n\t\t}else{\n\t\t\tcontentp = '<a style=\"display:inline-block;width:90%;margin-left:7px;\" href=\"/workflow/space/'+instance.space_id+'/inbox/'+instance.id+'\" target=\"_parent\">'+instance.name+'</a>';\n\t\t}\n        modified = instance.modified.replace(/^[0-9]*[-]/g,\"\");\n\t\treturn '<tr>\\\n                <td style=\"\"><div style=\"position:relative\">'+icon+contentp+'</div></td>\\\n                <td class=\"td-actions text-right\">\\\n                     <a style=\"display:inline-block;width:100%;\" href=\"/workflow/space/'+instance.space_id+'/inbox/'+instance.id+'\" target=\"_parent\">'+modified+'</a>\\\n                </td>\\\n            </tr>';\n    }\n})\n\nvar calendarListValue = datasources[\"events\"].data.map(function(event,index){\n    if(index<5){\n        start = event.start.replace(/^[0-9]*[-]/g,\"\");\n        if(event.site){\n            site = event.site\n        }else{\n            site = \"\"\n        }\n        return '<tr>\\\n\t\t\t\t\t\t<td><a style=\"display:inline-block;width:100%;\" href=\"/calendar\" target=\"_parent\">'+event.title+'</a></td>\\\n                        <td><a style=\"display:inline-block;width:100%;\" href=\"/calendar\" target=\"_parent\">'+start+'</a></td>\\\n                    </tr>';\n    }\n})\n\nsetTimeout(function(){\n\tli = $(\".callout-success\").closest(\"section\").prev().parent();\n\t$(li).css(\"margin-top\",\"-185px\");\n},1)\n\nreturn reValue.replace(\"%%\",listValue.join(\"\")).replace(\"$$\",calendarListValue.join(\"\"))",
+						"height": 9
+					}
+				}
+			]
+		},
+		{
+			"title": "",
+			"width": 1,
+			"row": {
+				"2": 25,
+				"3": 25,
+				"4": 15,
+				"5": 1,
+				"6": 1,
+				"7": 1,
+				"8": 1,
+				"9": 1,
+				"10": 1,
+				"11": 1,
+				"12": 1
+			},
+			"col": {
+				"2": 1,
+				"3": 1,
+				"4": 1,
+				"5": 5,
+				"6": 5,
+				"7": 5,
+				"8": 5,
+				"9": 5,
+				"10": 5,
+				"11": 5,
+				"12": 5
+			},
+			"col_width": "1",
+			"widgets": [
+				{
+					"type": "html",
+					"settings": {
+						"html": "var reValue = '<div class=\"sidebar siderbar-apps\" data-color=\"purple\" style=\"position: relative;z-index:0;background: #fff;border-radius: 3px;\">\\\n\t<div class=\"logo\">\\\n\t\t<a>\\\n\t\t\t<img class=\"media-object\" alt=\"Tim Picture\" src=\"assets/img/logo.jpg\" style=\"width:30px;margin-left: 40px;\">\\\n\t\t\t<p style=\"color:#333;float:right;position:relative;left:-55px;bottom:5px;\">河北港口集团</p>\\\n\t\t</a>\\\n\t</div>\\\n\t<div class=\"sidebar-wrapper\">\\\n\t\t<ul class=\"nav\">\\\n\t\t\t@@\\\n\t\t</ul>\\\n\t</div>\\\n</div>';\n\nvar listValue = datasources[\"hotoa_apps\"].data.map(function(app){\n        if(app._id==\"workflow\"&&datasources[\"hotoa_pending\"].data.length>0){\n            return '<li>\\\n                <a href=\"'+app.url+'\" style=\"float: left;width: 100%;margin: 0;padding: 10px 15px;\" target=\"_parent\">\\\n                    <i style=\"font-size: 31px;\" class=\"ion '+ app.icon +'\"></i>\\\n                    <p>'+app.name+'<span class=\"label label-danger\" style=\"margin-top: 7px;float: right;margin-right: 15px;overflow: hidden;display: inline;padding: .2em .6em .3em;font-size: 75%;font-weight: 700;line-height: 1;color: #fff;text-align: center;white-space: nowrap;vertical-align: baseline;border-radius: .25em;\">'+datasources[\"hotoa_pending\"].data.length+'</span></p>\\\n                </a>\\\n            </li>'\n        }else if(app._id==\"cms\"&&datasources[\"hotoa_cms_unreads\"].data.length>0){\n            return '<li>\\\n                <a href=\"'+app.url+'\" style=\"float: left;width: 100%;margin: 0;padding: 10px 15px;\" target=\"_parent\">\\\n                    <i style=\"font-size: 31px;\" class=\"ion '+ app.icon +'\"></i>\\\n                    <p>'+app.name+'<span class=\"label label-warning\" style=\"margin-top: 7px;float: right;margin-right: 15px;overflow: hidden;display: inline;padding: .2em .6em .3em;font-size: 75%;font-weight: 700;line-height: 1;color: #fff;text-align: center;white-space: nowrap;vertical-align: baseline;border-radius: .25em;\">'+datasources[\"hotoa_cms_unreads\"].data.length+'</span></p>\\\n                </a>\\\n            </li>'\n        }else{\n            return '<li>\\\n                <a href=\"'+app.url+'\" style=\"float: left;width: 100%;margin: 0;padding: 10px 15px;\" target=\"_parent\">\\\n                    <i style=\"font-size: 31px;\" class=\"ion '+ app.icon +'\"></i>\\\n                    <p>'+app.name+'</p>\\\n                </a>\\\n            </li>';\n        }\n})\n\nsetTimeout(function(){\n\tli = $(\".siderbar-apps\").closest(\"section\").prev().parent();\n\t$(li).css(\"margin-top\",\"-488px\");\n},1)\nreturn reValue.replace(\"@@\",listValue.join(\"\")); ",
+						"height": 9
+					}
+				}
+			]
+		}
+	],
+	"datasources": [
+		{
+			"name": "hotoa_pending",
+			"type": "JSON",
+			"settings": {
+				"url": "/api/workflow/open/pending?state=pending",
+				"use_thingproxy": true,
+				"refresh": 3000,
+				"method": "GET",
+				"headers": [
+					{
+						"name": "ABC",
+						"value": "ABC"
+					},
+					{
+						"name": "X-User-Id",
+						"value": "5194c9edf4a5635357000013"
+					},
+					{
+						"name": "X-Auth-Token",
+						"value": "ZQhJaqU57y4l9T0FABxbSqrcQDgSUWhmT_yg9HZFyMU"
+					},
+					{
+						"name": "X-Space-Id",
+						"value": "53215960334904539e00121a"
+					},
+					{
+						"name": "X-User-Id",
+						"value": "5194c9edf4a5635357000013"
+					},
+					{
+						"name": "X-Auth-Token",
+						"value": "ZQhJaqU57y4l9T0FABxbSqrcQDgSUWhmT_yg9HZFyMU"
+					},
+					{
+						"name": "X-Space-Id",
+						"value": "53215960334904539e00121a"
+					}
+				],
+				"name": "hotoa_pending"
+			}
+		},
+		{
+			"name": "hotoa_cms_unreads",
+			"type": "JSON",
+			"settings": {
+				"url": "/api/cms/unread_posts",
+				"use_thingproxy": false,
+				"refresh": 300,
+				"method": "GET",
+				"headers": [
+					{
+						"name": "X-User-Id",
+						"value": "5194c9edf4a5635357000013"
+					},
+					{
+						"name": "X-Auth-Token",
+						"value": "ZQhJaqU57y4l9T0FABxbSqrcQDgSUWhmT_yg9HZFyMU"
+					},
+					{
+						"name": "X-Space-Id",
+						"value": "53215960334904539e00121a"
+					}
+				]
+			}
+		},
+		{
+			"name": "hotoa_apps",
+			"type": "JSON",
+			"settings": {
+				"url": "/api/get/apps",
+				"use_thingproxy": false,
+				"refresh": 60000,
+				"method": "GET",
+				"headers": [
+					{
+						"name": "X-User-Id",
+						"value": "5194c9edf4a5635357000013"
+					},
+					{
+						"name": "X-Auth-Token",
+						"value": "ZQhJaqU57y4l9T0FABxbSqrcQDgSUWhmT_yg9HZFyMU"
+					},
+					{
+						"name": "X-Space-Id",
+						"value": "53215960334904539e00121a"
+					}
+				]
+			}
+		},
+		{
+			"name": "events",
+			"type": "JSON",
+			"settings": {
+				"url": "/calendar/api/calendar/events",
+				"use_thingproxy": true,
+				"refresh": 300,
+				"method": "GET",
+				"headers": [
+					{
+						"name": "X-User-Id",
+						"value": "5194c9edf4a5635357000013"
+					},
+					{
+						"name": "X-Auth-Token",
+						"value": "ZQhJaqU57y4l9T0FABxbSqrcQDgSUWhmT_yg9HZFyMU"
+					},
+					{
+						"name": "X-Space-Id",
+						"value": "53215960334904539e00121a"
+					}
+				]
+			}
+		}
+	],
+	"columns": 4
+}

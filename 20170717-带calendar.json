@@ -1,0 +1,211 @@
+{
+	"version": 1,
+	"allow_edit": true,
+	"plugins": [],
+	"panes": [
+		{
+			"width": 1,
+			"row": {
+				"2": 1,
+				"3": 1,
+				"4": 1
+			},
+			"col": {
+				"2": 1,
+				"3": 1,
+				"4": 1
+			},
+			"col_width": "4",
+			"widgets": [
+				{
+					"type": "html",
+					"settings": {
+						"html": "content = '<center><h1 id=\"qhd-title\" style=\"font-size:22px;font-family: 华文仿宋,仿宋;margin-top: 22px;color:#fff;\">上网信息不涉密&nbsp;&nbsp;&nbsp; 涉密信息不上网</h1></center>';\nsetTimeout(function(){  \n     header = $(\"h1#qhd-title\").closest(\"section\").prev();\n     li = header.parent();\n     htmlWidget = $(\"h1#qhd-title\").closest(\".html-widget\");\n     $(htmlWidget).css(\"overflow\",\"visible\");\n     $(li).css({\"background\":\"transparent\",\"box-shadow\":\"none\"});\n     $(header).hide();\n    width = $(\"div#board-content\").width()-300-35;\n    if (width < 960){\n        $(\"li[data-sizex='3']\").css(\"width\",width+\"px\");\n    }else{\n        $(\"li[data-sizex='3']\").css(\"width\",\"960px\");\n    }\n},1) \n$(\".gridster.responsive-column-width.ready\").css(\"min-width\",\"1280px\");\nzoom = $(\"div#board-content\").width()/1280-0.1;\nif(zoom < 1){\n    $(\".gridster.responsive-column-width.ready\").css(\"zoom\",1) \n}else{\n    $(\".gridster.responsive-column-width.ready\").css(\"zoom\",zoom);\n}\n$(window).resize(function(){\n    zoom = $(\"div#board-content\").width()/1280-0.1;\n    width = $(\"div#board-content\").width()-300-30;\n    if(zoom < 1){\n        $(\".gridster.responsive-column-width.ready\").css(\"zoom\",1) \n    }else{\n        $(\".gridster.responsive-column-width.ready\").css(\"zoom\",zoom) \n    }\n    if (width < 960){\n    $(\"li[data-sizex='3']\").css(\"width\",width);\n    }else{\n        $(\"li[data-sizex='3']\").css(\"width\",\"960px\");\n    } \n    width = $(\"div#board-content\").width()-300-35;\n     if(width < 960){\n        headerLi = $(\"h1#qhd-title\").closest(\"section\").prev().parent();\n    \t$(headerLi).css(\"width\",\"1024px\");\n        margin = ($(\"#board-content\").width() - 1024)/2;\n     \t$(headerLi).css({\"width\":\"1024px\",\"left\":margin});\n     }\n})\nsetTimeout(function(){\n     headerLi = $(\"h1#qhd-title\").closest(\"section\").prev().parent();\n     width = $(\"div#board-content\").width()-300-35;\n     if(width < 960){\n        headerLi = $(\"h1#qhd-title\").closest(\"section\").prev().parent();\n        $(headerLi).css(\"width\",\"1024px\");\n        margin = ($(\"#board-content\").width() - 1024)/2;\n     \t$(headerLi).css({\"width\":\"1024px\",\"left\":margin});\n     }\n})\nreturn content",
+						"height": 1
+					}
+				}
+			]
+		},
+		{
+			"title": "通知中心",
+			"width": 1,
+			"row": {
+				"1": 1,
+				"2": 5,
+				"3": 5,
+				"4": 5,
+				"5": 1,
+				"6": 1
+			},
+			"col": {
+				"1": 1,
+				"2": 1,
+				"3": 1,
+				"4": 2,
+				"5": 1,
+				"6": 1
+			},
+			"col_width": "3",
+			"widgets": [
+				{
+					"type": "html",
+					"settings": {
+						"html": "reValue = '<div class=\"callout callout-success lead pending\" style=\"margin: 8px 10px 0 10px;\">\\\n<div  class=\"workflow-container\" style=\"display:none;margin-bottom:20px;margin-left:4px\">\\\n\t\t\t\t<div style=\"height:32px;border-bottom:1px solid #e5e5e5\">\\\n\t\t\t\t\t<span style=\"display:inline-block;font-size:14px;font-weight:bold;line-height:24px\">待审批公文</span>\\\n                    $$\\\n                </div>\\\n                <table id=\"workflow-pending\" class=\"row-border hover widget-datatable\" cellspacing=\"0\" width=\"100%\">\\\n                    <thead style=\"\">\\\n                        <tr>\\\n\t\t\t\t\t\t\t<th style=\"width:25%;border-bottom:1px solid #f4f4f4;color: #333;padding: 8px 18px;\">标题</th>\\\n                            <th style=\"width:25%;border-bottom:1px solid #f4f4f4;color: #333;padding: 8px 18px;\">申请人</th>\\\n\t\t\t\t\t\t\t<th style=\"width:25%;border-bottom:1px solid #f4f4f4;color: #333;padding: 8px 18px;\">当前步骤</th>\\\n\t\t\t\t\t\t\t<th style=\"width:25%;border-bottom:1px solid #f4f4f4;color: #333;padding: 8px 18px;\">处理时间</th>\\\n                        </tr>\\\n                    </thead>\\\n                    <tbody>\\\n                        %@\\\n                    <tbody>\\\n                </table>\\\n\t\t\t</div>\\\n\t\t\t<div style=\"margin:20px 0;display:none;margin-left:4px\"  class=\"cms-container\">\\\n\t\t\t\t<div  style=\"height:32px;border-bottom:1px solid #e5e5e5\">\\\n                    <span style=\"display:inline-block;font-size:14px;font-weight:bold;line-height:24px\">集团信息</span>\\\n                    @@\\\n                </div>\\\n                <table id=\"cms-unreads\" class=\"row-border hover widget-datatable\" cellspacing=\"0\" width=\"100%\">\\\n                    <thead style=\"\">\\\n                        <tr>\\\n                            <th style=\"width:25%;border-bottom:1px solid #f4f4f4;color: #333;padding: 8px 18px;\">标题</th>\\\n                            <th style=\"width:25%;border-bottom:1px solid #f4f4f4;color: #333;padding: 8px 18px;\">作者</th>\\\n\t\t\t\t\t\t\t<th style=\"width:25%;border-bottom:1px solid #f4f4f4;color: #333;padding: 8px 18px;\">已阅人数</th>\\\n\t\t\t\t\t\t\t<th style=\"width:25%;border-bottom:1px solid #f4f4f4;color: #333;padding: 8px 18px;\">发布时间</th>\\\n                        </tr>\\\n                    </thead>\\\n                    <tbody>\\\n                        %%\\\n                    <tbody>\\\n                </table>\\\n\t\t\t</div>\\\n\t\t\t<div style=\"margin:20px 0;display:none;margin-left:4px\"  class=\"calendar-container\">\\\n\t\t\t\t<div  style=\"height:32px;border-bottom:1px solid #e5e5e5\">\\\n                    <span style=\"display:inline-block;font-size:14px;font-weight:bold;line-height:24px\">工作安排日程表</span>\\\n                    &&\\\n                </div>\\\n                <table id=\"calendar-events\" class=\"row-border hover widget-datatable\" cellspacing=\"0\" width=\"100%\">\\\n                    <thead style=\"\">\\\n                        <tr>\\\n                            <th style=\"width:25%;border-bottom:1px solid #f4f4f4;color: #333;padding: 8px 18px;\">内容</th>\\\n                            <th style=\"width:25%;border-bottom:1px solid #f4f4f4;color: #333;padding: 8px 18px;\">地点</th>\\\n\t\t\t\t\t\t\t<th style=\"width:25%;border-bottom:1px solid #f4f4f4;color: #333;padding: 8px 18px;\">参加人员</th>\\\n\t\t\t\t\t\t\t<th style=\"width:25%;border-bottom:1px solid #f4f4f4;color: #333;padding: 8px 18px;\">开始时间</th>\\\n                        </tr>\\\n                    </thead>\\\n                    <tbody>\\\n                        **\\\n                    <tbody>\\\n                </table>\\\n\t\t\t</div>\\\n  \t</div>';\nlistValue = datasources[\"hotoa_pending\"].data.map(function(instance,index){\n    if(index<10){\n        return '<tr>\\\n\t\t\t\t\t<td style=\"width:25%\"><div style=\"position:relative\"><span style=\"font-size:30%;position:absolute;top:2px;left:-10px\">■</span><a style=\"display:inline-block;width:90%;margin-left:7px;\" href=\"/workflow/space/'+instance.space_id+'/inbox/'+instance.id+'\" target=\"_parent\">'+instance.name+'</a></div></td>\\\n                    <td style=\"width:25%\"><a style=\"display:inline-block;width:100%;margin-left:9px;\" href=\"/workflow/space/'+instance.space_id+'/inbox/'+instance.id+'\" target=\"_parent\">'+instance.applicant_name+'</a></td>\\\n\t\t\t\t\t<td style=\"width:25%\"><a style=\"display:inline-block;width:100%;margin-left:9px;\" href=\"/workflow/space/'+instance.space_id+'/inbox/'+instance.id+'\" target=\"_parent\">'+instance.step_name+'</a></td>\\\n                    <td style=\"width:25%\"><a style=\"display:inline-block;width:100%;margin-left:9px;\" href=\"/workflow/space/'+instance.space_id+'/inbox/'+instance.id+'\" target=\"_parent\">'+instance.modified+'</a></td>\\\n\t\t\t\t</tr>'\n    };\n});\nif(datasources[\"hotoa_pending\"].data.length>10){\n    tfoot='<div style=\"float:right;padding:4px 10px 4px 0;line-height:24px\">\\\n\t\t\t\t\t<a style=\"font-weight:normal;color:#898989;font-size:14px\" href=\"/workflow\" target=\"_parent\"><i style=\"color:#898989;margin-left:3px;\" class=\"ion-ios-more\"></i></a>\\\n\t\t\t\t</div>';\n}else{\n    tfoot='';\n};\nif(datasources[\"hotoa_pending\"].data.length>0){\n    setTimeout(function(){\n            $(\"#workflow-pending\").DataTable({\n                \"paging\": false,\n                \"info\": false,\n                \"ordering\":false,\n                \"searching\": false,\n                \"bRetrieve\":true,\n                \"autoWidth\": false\n            });\n            $(\".workflow-container\").show();\n        },1);\t\n}\n\ncmslistValue = datasources[\"hotoa_cms_unreads\"].data.map(function(post,index){\n    if(post.viewCount){\n        viewCount = post.viewCount;\n    }else{\n        viewCount = 0;\n    }\n\tif(index<5){\n        if(post.category){\n             var cmsHtml =  '<tr>\\\n\t\t\t\t\t\t<td style=\"width:25%\">\\\n                        \t<div style=\"position:relative\">\\\n                                <span style=\"font-size:30%;position:absolute;top:2px;left:-10px\">■</span>\\\n                                <a style=\"display:inline-block;width:90%;margin-left:7px;font-weight: bold;\" href=\"/cms/s/'+post.site+'/c/'+post.category+'/p/'+post._id+'\" target=\"_parent\">'+post.title+'</a>\\\n                           \t</div>\\\n                        </td>\\\n\t\t\t\t\t\t<td style=\"width:25%\"><a style=\"display:inline-block;width:100%;margin-left:9px;\" href=\"/cms/s/'+post.site+'/c/'+post.category+'/p/'+post._id+'\" target=\"_parent\">'+post.author_name+'</a></td>\\\n\t\t\t\t\t\t<td style=\"width:25%\"><a style=\"display:inline-block;width:100%;margin-left:9px;\" href=\"/cms/s/'+post.site+'/c/'+post.category+'/p/'+post._id+'\" target=\"_parent\">'+viewCount+'</a></td>\\\n\t\t\t\t\t\t<td style=\"width:25%\"><a style=\"display:inline-block;width:100%;margin-left:9px;\" href=\"/cms/s/'+post.site+'/c/'+post.category+'/p/'+post._id+'\" target=\"_parent\">'+post.modified+'</a></td>\\\n                    </tr>';\n            return cmsHtml;\n        }else{\n            return '<tr>\\\n\t\t\t\t\t\t<td style=\"width:25%\"><div style=\"position:relative\"><span style=\"font-size:30%;position:absolute;top:2px;left:-10px\">■</span><a style=\"display:inline-block;width:90%;margin-left:7px;\" href=\"/cms/s/'+post.site+'/p/'+post._id+'\" target=\"_parent\">'+post.title+'</a></div></td>\\\n\t\t\t\t\t\t<td style=\"width:25%\"><a style=\"display:inline-block;width:100%;margin-left:9px;\" href=\"/cms/s/'+post.site+'/p/'+post._id+'\" target=\"_parent\">'+post.author_name+'</a></td>\\\n\t\t\t\t\t\t<td style=\"width:25%\"><a style=\"display:inline-block;width:100%;margin-left:9px;\" href=\"/cms/s/'+post.site+'/p/'+post._id+'\" target=\"_parent\">'+viewCount+'</a></td>\\\n\t\t\t\t\t\t<td style=\"width:25%\"><a style=\"display:inline-block;width:100%;margin-left:9px;\" href=\"/cms/s/'+post.site+'/p/'+post._id+'\" target=\"_parent\">'+post.modified+'</a></td>\\\n                    </tr>'\n        }\n    }\n});\nif(datasources[\"hotoa_cms_unreads\"].data.length>5){\n    cmstfoot='<div style=\"float:right;padding:4px 10px 4px 0;line-height:24px\">\\\n\t\t\t\t\t<a style=\"font-weight:normal;color:#898989;font-size:14px\" href=\"/cms\" target=\"_parent\"><i style=\"color:#898989;margin-left:3px;\" class=\"ion-ios-more\"></i></a>\\\n\t\t\t\t</div>';\n}else{\n    cmstfoot='';\n};\nif(datasources[\"hotoa_cms_unreads\"].data.length>0){\n    setTimeout(function(){\n            $(\"#cms-unreads\").DataTable({\n                \"paging\": false,\n                \"info\": false,\n                \"searching\": false,\n                \"bRetrieve\":true,\n                \"autoWidth\": false\n            });\n            $(\".cms-container\").show();\n        },1);\n}\ncalendarlistValue = datasources[\"events\"].data.map(function(event,index){\n    if(event.participation){\n        participation = event.participation\n    }else{\n        participation = \"\"\n    }\n    if(event.site){\n        site = event.site\n    }else{\n        site = \"\"\n    }\n    if(index<5){\n        return '<tr>\\\n                    <td><div style=\"position:relative\"><span style=\"font-size:30%;position:absolute;top:2px;left:-10px\">■</span><a style=\"display:inline-block;width:90%;margin-left:7px\" href=\"/calendar\" target=\"_parent\">'+event.title+'</a></div></td>\\\n                    <td style=\"width:25%;\"><a style=\"display:inline-block;width:100%;margin-left:9px;\" href=\"/calendar\" target=\"_parent\">'+site+'</a></td>\\\n\t\t\t\t\t<td style=\"width:25%;\"><a style=\"display:inline-block;width:100%;margin-left:9px;\" href=\"/calendar\" target=\"_parent\">'+participation+'</a></td>\\\n\t\t\t\t\t<td style=\"width:25%;\"><a style=\"display:inline-block;width:100%;margin-left:9px;\" href=\"/calendar\" target=\"_parent\">'+event.start+'</a></td>\\\n                </tr>'\n    };\n});\nif(datasources[\"events\"].data.length>4){\n    calendarfoot='<div style=\"float:right;padding:4px 10px 4px 0;line-height:24px\">\\\n                    <a style=\"font-weight:normal;color:#898989;font-size:14px\" href=\"/calendar\" target=\"_parent\"><i style=\"color:#898989;margin-left:3px;\" class=\"ion-ios-more\"></i></a>\\\n                </div>';\n}else{\n    calendarfoot='';\n};\nif(datasources[\"events\"].data.length>0){\n    setTimeout(function(){\n            $(\"#calendar-events\").DataTable({\n                \"paging\": false,\n                \"info\": false,\n                \"ordering\":false,\n                \"searching\": false,\n                \"bRetrieve\":true\n            });\n            $(\".calendar-container\").show();\n        },1);   \n}\nsetTimeout(function(){\n\tli = $(\".callout-success\").closest(\"section\").prev().parent();\n    $(li).css(\"margin-top\",\"-60px\");\n},1)\nreturn reValue.replace(\"$$\",tfoot).replace(\"%@\",listValue.join(\"\")).replace(\"@@\",cmstfoot).replace(\"%%\",cmslistValue.join(\"\")).replace(\"&&\",calendarfoot).replace(\"**\",calendarlistValue.join(\"\"));",
+						"height": 9
+					}
+				}
+			]
+		},
+		{
+			"title": "应用列表",
+			"width": 1,
+			"row": {
+				"2": 25,
+				"3": 25,
+				"4": 5,
+				"5": 1,
+				"6": 1,
+				"7": 1,
+				"8": 1,
+				"9": 1
+			},
+			"col": {
+				"2": 1,
+				"3": 1,
+				"4": 1,
+				"5": 5,
+				"6": 5,
+				"7": 5,
+				"8": 5,
+				"9": 5
+			},
+			"col_width": "1",
+			"widgets": [
+				{
+					"type": "html",
+					"settings": {
+						"html": "var reValue = '<div class=\"widget-grids apps\">%@<div style=\"clear:both\"></div></div>';\n\nvar listValue = datasources[\"hotoa_apps\"].data.map(function(app){\n\tif(app._id==\"workflow\"&&datasources[\"hotoa_pending\"].data.length>0){\n\t\treturn '<a class=\"widget-grid\" target=\"_parent\" href=\"'+app.url+'\" title=\"'+app.name+'\" >\\\n\t\t\t<div class=\"widget-grid-wrapper\">\\\n<div class=\"widget-grid-icon\"><i class=\"ion '+ app.icon +'\"><span style=\"font-weight: bold;color: #fff;background: #dd4b39;font-size: 9px;position: relative;left: 14px;top: -60px;border-radius: 3px;padding:2px 3px;font-family: -apple-system, BlinkMacSystemFont, Helvetica, Arial, Microsoft Yahei, SimHei\">'+datasources[\"hotoa_pending\"].data.length+'</span></i></div>\\\n\t\t\t\t<div class=\"widget-grid-label\">'+app.name+'</div>\\\n\t\t\t</div>\\\n\t\t</a>';\n\t}else if(app._id==\"cms\"&&datasources[\"hotoa_cms_unreads\"].data.length>0){\n\t\treturn '<a class=\"widget-grid\" target=\"_parent\" href=\"'+app.url+'\" title=\"'+app.name+'\" >\\\n\t\t\t<div class=\"widget-grid-wrapper\">\\\n<div class=\"widget-grid-icon\"><i class=\"ion '+ app.icon +'\"><span style=\"font-weight: bold;color: #fff;background: #f39c12;font-size: 9px;position: relative;left: 14px;top: -60px;border-radius: 3px;padding:2px 3px;font-family: -apple-system, BlinkMacSystemFont, Helvetica, Arial, Microsoft Yahei, SimHei\">'+datasources[\"hotoa_cms_unreads\"].data.length+'</span></i></div>\\\n\t\t\t\t<div class=\"widget-grid-label\">'+app.name+'</div>\\\n\t\t\t</div>\\\n\t\t</a>';\n\t}else{\n\t\treturn '<a class=\"widget-grid\" target=\"_parent\" href=\"'+app.url+'\" title=\"'+app.name+'\" >\\\n\t\t\t<div class=\"widget-grid-wrapper\">\\\n\t\t\t\t<div class=\"widget-grid-icon\"><i class=\"ion '+ app.icon +'\"></i></div>\\\n\t\t\t\t<div class=\"widget-grid-label\">'+app.name+'</div>\\\n\t\t\t</div>\\\n\t\t</a>';\n\t}\n})\nsetTimeout(function(){\n\tli = $(\".widget-grids.apps\").closest(\"section\").prev().parent();\n    $(li).css(\"margin-top\",\"-60px\");\n},1)\nreturn reValue.replace(\"%@\",listValue.join(\"\")); ",
+						"height": 9
+					}
+				}
+			]
+		}
+	],
+	"datasources": [
+		{
+			"name": "hotoa_pending",
+			"type": "JSON",
+			"settings": {
+				"url": "/api/workflow/open/pending?state=pending",
+				"use_thingproxy": true,
+				"refresh": 3000,
+				"method": "GET",
+				"headers": [
+					{
+						"name": "ABC",
+						"value": "ABC"
+					},
+					{
+						"name": "X-User-Id",
+						"value": "5194c9edf4a5635357000013"
+					},
+					{
+						"name": "X-Auth-Token",
+						"value": "LFfPKaHiQ2BffNE6BUJvWx98co6zIiSPTq99h4f5qso"
+					},
+					{
+						"name": "X-Space-Id",
+						"value": "53215960334904539e00121a"
+					},
+					{
+						"name": "X-User-Id",
+						"value": "5194c9edf4a5635357000013"
+					},
+					{
+						"name": "X-Auth-Token",
+						"value": "LFfPKaHiQ2BffNE6BUJvWx98co6zIiSPTq99h4f5qso"
+					},
+					{
+						"name": "X-Space-Id",
+						"value": "53215960334904539e00121a"
+					}
+				],
+				"name": "hotoa_pending"
+			}
+		},
+		{
+			"name": "hotoa_cms_unreads",
+			"type": "JSON",
+			"settings": {
+				"url": "/api/cms/unread_posts",
+				"use_thingproxy": false,
+				"refresh": 300,
+				"method": "GET",
+				"headers": [
+					{
+						"name": "X-User-Id",
+						"value": "5194c9edf4a5635357000013"
+					},
+					{
+						"name": "X-Auth-Token",
+						"value": "LFfPKaHiQ2BffNE6BUJvWx98co6zIiSPTq99h4f5qso"
+					},
+					{
+						"name": "X-Space-Id",
+						"value": "53215960334904539e00121a"
+					}
+				]
+			}
+		},
+		{
+			"name": "hotoa_apps",
+			"type": "JSON",
+			"settings": {
+				"url": "/api/get/apps",
+				"use_thingproxy": false,
+				"refresh": 60,
+				"method": "GET",
+				"headers": [
+					{
+						"name": "X-User-Id",
+						"value": "5194c9edf4a5635357000013"
+					},
+					{
+						"name": "X-Auth-Token",
+						"value": "LFfPKaHiQ2BffNE6BUJvWx98co6zIiSPTq99h4f5qso"
+					},
+					{
+						"name": "X-Space-Id",
+						"value": "53215960334904539e00121a"
+					}
+				],
+				"name": "hotoa_apps"
+			}
+		},
+		{
+			"name": "events",
+			"type": "JSON",
+			"settings": {
+				"url": "http://192.168.0.72:3008/calendar/api/calendar/events",
+				"use_thingproxy": true,
+				"refresh": 300,
+				"method": "GET",
+				"headers": [
+					{
+						"name": "X-User-Id",
+						"value": "5194c9edf4a5635357000013"
+					},
+					{
+						"name": "X-Auth-Token",
+						"value": "LFfPKaHiQ2BffNE6BUJvWx98co6zIiSPTq99h4f5qso"
+					},
+					{
+						"name": "X-Space-Id",
+						"value": "53215960334904539e00121a"
+					}
+				]
+			}
+		}
+	],
+	"columns": 4
+}

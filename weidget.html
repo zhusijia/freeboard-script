@@ -1,0 +1,88 @@
+reValue = '<div class="card callout-success" style="width:49%;float:left">\
+	<div class="card-header" data-background-color="orange">\
+		<h4 class="title">待办公文</h4>\
+	</div>\
+	<div class="card-content table-responsive">\
+		<table class="table table-hover">\
+			<thead class="text-warning" style="color:blue">\
+				<tr>\
+					<th style="width:75%"><div style="margin-left: 7px;">标题</div></th>\
+                	<th><div>接收时间</div></th>\
+				</tr>\
+            </thead>\
+			<tbody>\
+				%%\
+			</tbody>\
+		</table>\
+	</div>\
+</div>\
+<div class="card" style="width:49%;float:right">\
+	<div class="card-header" data-background-color="blue">\
+		<h4 class="title">我的工作安排</h4>\
+	</div>\
+	<div class="card-content table-responsive">\
+		<table class="table table-hover">\
+			<thead class="text-warning" style="color:blue">\
+				<tr>\
+					<th style="width:75%"><div>标题</div></th>\
+                	<th><div>开始时间</div></th>\
+				</tr>\
+            </thead>\
+			<tbody>\
+				$$\
+			</tbody>\
+		</table>\
+	</div>\
+</div>';
+
+var listValue = datasources["hotoa_pending"].data.map(function(instance,index){
+    if(index<5){
+    	if(instance.is_read == false){
+			icon = '<i class="ion ion-record" style="font-size:80%;position:absolute;top:5px;left:-10px;color:#1f95ec;"></i>';
+		}else{
+			icon = '';
+		}
+		if(instance.values){
+			if(instance.values.priority == "办文"){
+				contentp = '<a style="display:inline-block;width:90%;margin-left:7px;color:blue;" href="/workflow/space/'+instance.space_id+'/inbox/'+instance.id+'" target="_parent">'+instance.name+'</a>';   
+			}else if(instance.values.priority == "紧急"){
+				contentp = '<a style="display:inline-block;width:90%;margin-left:7px;color:purple;" href="/workflow/space/'+instance.space_id+'/inbox/'+instance.id+'" target="_parent">'+instance.name+'</a>';   
+			}else if(instance.values.priority == "特急"){
+				contentp = '<a style="display:inline-block;width:90%;margin-left:7px;color:red;" href="/workflow/space/'+instance.space_id+'/inbox/'+instance.id+'" target="_parent">'+instance.name+'</a>';   
+			}else{
+				contentp = '<a style="display:inline-block;width:90%;margin-left:7px;" href="/workflow/space/'+instance.space_id+'/inbox/'+instance.id+'" target="_parent">'+instance.name+'</a>';
+			}
+		}else{
+			contentp = '<a style="display:inline-block;width:90%;margin-left:7px;" href="/workflow/space/'+instance.space_id+'/inbox/'+instance.id+'" target="_parent">'+instance.name+'</a>';
+		}
+        modified = instance.modified.replace(/^[0-9]*[-]/g,"");
+		return '<tr>\
+                <td style=""><div style="position:relative">'+icon+contentp+'</div></td>\
+                <td class="td-actions text-right">\
+                     <a style="display:inline-block;width:100%;" href="/workflow/space/'+instance.space_id+'/inbox/'+instance.id+'" target="_parent">'+modified+'</a>\
+                </td>\
+            </tr>';
+    }
+})
+
+var calendarListValue = datasources["events"].data.map(function(event,index){
+    if(index<5){
+        start = event.start.replace(/^[0-9]*[-]/g,"");
+        if(event.site){
+            site = event.site
+        }else{
+            site = ""
+        }
+        return '<tr>\
+						<td><a style="display:inline-block;width:100%;" href="/calendar" target="_parent">'+event.title+'</a></td>\
+                        <td><a style="display:inline-block;width:100%;" href="/calendar" target="_parent">'+start+'</a></td>\
+                    </tr>';
+    }
+})
+
+setTimeout(function(){
+	li = $(".callout-success").closest("section").prev().parent();
+	$(li).css("margin-top","-250px");
+},1)
+
+return reValue.replace("%%",listValue.join("")).replace("$$",calendarListValue.join(""))
