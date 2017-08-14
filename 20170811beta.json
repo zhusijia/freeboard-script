@@ -1,0 +1,253 @@
+{
+	"version": 1,
+	"allow_edit": true,
+	"plugins": [],
+	"panes": [
+		{
+			"width": 1,
+			"row": {
+				"2": 1,
+				"3": 1,
+				"4": 1,
+				"5": 1
+			},
+			"col": {
+				"2": 1,
+				"3": 1,
+				"4": 2,
+				"5": 1
+			},
+			"col_width": "3",
+			"widgets": [
+				{
+					"type": "html",
+					"settings": {
+						"html": "html = '<div class=\"list-apps\" style=\"margin-top:35px\"><a data-appid=\"TGQNeBymyLapyxsSC\" class=\"calendar\" style=\"float:left;width: 23.5%;margin: 0 0.5% 0 1%;cursor:pointer;\">\\\n    <div class=\"card card-stats\">\\\n        <div class=\"card-header\" data-background-color=\"red\" data-header-animation=\"true\" style=\"width:27%;height:27%\">\\\n            <i class=\"ion ion-ios-calendar-outline\" style=\"color:#fff;font-size:30px;width: 100%;\"></i>\\\n        </div>\\\n        <div class=\"card-content\" style=\"height: 56px;\">\\\n            <p class=\"category\" style=\"display:none;\">Followers</p>\\\n            <h3 class=\"title\" style=\"color:#333;font-size: 15px;font-weight: bold;width: 100%;\">\\\n\t\t\t\t<span style=\"position: absolute;width: 38%;right: 7px;writing-mode: unset;\">本周安排</span>\\\n\t\t\t</h3>\\\n        </div>\\\n    </div>\\\n</a>\\\n<a id=\"contacts\" data-appid=\"XMQHzzX4jqoii5MyD\" style=\"float:left;width: 23.5%;margin: 0 0.5% 0 1%;cursor: pointer;\">\\\n    <div class=\"card card-stats\">\\\n        <div class=\"card-header\" data-background-color=\"orange\" data-header-animation=\"true\" style=\"width:27%;height:27%\">\\\n            <i class=\"ion ion ion-ios-people-outline\" style=\"color:#fff;font-size:30px;width: 100%;\"></i>\\\n        </div>\\\n        <div class=\"card-content\" style=\"height: 56px;\">\\\n            <p class=\"category\" style=\"display:none;\">Followers</p>\\\n            <h3 class=\"title\" style=\"color:#333;font-size: 15px;font-weight: bold;width: 100%;\">\\\n\t\t\t\t<span style=\"position: absolute;width: 38%;right: 7px;writing-mode: unset;\">通讯录</span>\\\n\t\t\t</h3>\\\n        </div>\\\n    </div>\\\n</a>\\\n<a href=\"http://192.168.99.200\" target=\"_blank\" style=\"float:left;width: 23.5%;margin: 0 0.5% 0 1%;\">\\\n    <div class=\"card card-stats\">\\\n        <div class=\"card-header\" data-background-color=\"blue\" data-header-animation=\"true\" style=\"width:27%;height:27%\">\\\n            <i class=\"ion ion-ios-email-outline\" style=\"color:#fff;font-size:30px;width: 100%;\"></i>\\\n        </div>\\\n        <div class=\"card-content\" style=\"height: 56px;\">\\\n            <p class=\"category\" style=\"display:none;\">Followers</p>\\\n            <h3 class=\"title\" style=\"color:#333;font-size: 15px;font-weight: bold;width: 100%;\">\\\n\t\t\t\t<span style=\"position: absolute;width: 38%;right: 7px;writing-mode: unset;\">电子邮件</span>\\\n\t\t\t</h3>\\\n        </div>\\\n    </div>\\\n</a>\\\n<a id=\"special\" target=\"_parent\" style=\"float:left;width: 23.5%;margin: 0 0.5% 0 1%;\">\\\n    <div class=\"card card-stats\">\\\n        <div class=\"card-header\" data-background-color=\"green\" data-header-animation=\"true\" style=\"width:27%;height:27%\">\\\n            <i class=\"ion-ios-pie-outline\" style=\"color:#fff;font-size:30px;width: 100%;\"></i>\\\n        </div>\\\n        <div class=\"card-content\" style=\"height: 56px;\">\\\n            <p class=\"category\" style=\"display:none;\">Followers</p>\\\n            <h3 class=\"title\" style=\"color:#333;font-size: 15px;font-weight: bold;width: 100%;\">\\\n\t\t\t\t<span style=\"position: absolute;width: 38%;right: 7px;writing-mode: unset;\">生产动态</span>\\\n\t\t\t</h3>\\\n        </div>\\\n    </div>\\\n</a></div>';\nsetTimeout(function(){\n    sub = $(\".list-apps\").closest(\".sub-section\");\n    $(sub).css({\"border\":\"none\"});\n    $(\"#special\").on(\"click\",function(){\n    \tvar arr = [];\n        index = window.parent._.indexOf(arr,window.parent.Meteor.user().username);\n        if(index<0){\n            alert(\"该功能即将上线\");\n        }else{\t\n\t\t\t$(this).attr(\"href\",\"/workflow\");\n        }  \n    })\n    $(\"#contacts\").on(\"click\",function(){\n        appid = $(this).data(\"appid\");\n        Steedos.openApp(appid);\n    })\n    $(\".calendar\").on(\"click\",function(){\n        appid = $(this).data(\"appid\");\n        Steedos.openApp(appid);\n    })\n},1)\nreturn html;",
+						"height": 3
+					}
+				},
+				{
+					"type": "html",
+					"settings": {
+						"html": "reValue = '<div class=\"card callout-success\" style=\"width: 48.5%;float:left;margin: 30px 0.5% 29px 1%;height:232px;\">\\\n\t<div class=\"card-header\" data-background-color=\"orange\">\\\n\t\t<h4 class=\"title\" style=\"font-size:17px;font-family:-apple-system, BlinkMacSystemFont, Helvetica, Arial, Microsoft Yahei, SimHei;font-weight: bold;\">公文处理</h4>\\\n\t</div>\\\n\t<div class=\"card-content table-responsive\" style=\"max-height: 174px;overflow-y: auto;padding: 0 20px;margin-top: 10px;\">\\\n\t\t<table class=\"table table-hover\" style=\"table-layout: fixed;\">\\\n\t\t\t<tbody>\\\n\t\t\t\t%%\\\n\t\t\t</tbody>\\\n\t\t</table>\\\n\t</div>\\\n</div>\\\n<div class=\"card\" style=\"width: 48.5%;float:left;margin: 30px 0.5% 29px 1%;height:232px;\">\\\n\t<div class=\"card-header\" data-background-color=\"red\">\\\n\t\t<h4 class=\"title\" style=\"font-size:17px;font-family:-apple-system, BlinkMacSystemFont, Helvetica, Arial, Microsoft Yahei, SimHei;font-weight: bold;\">我的工作安排</h4>\\\n\t</div>\\\n\t<div class=\"card-content table-responsive\" style=\"max-height: 174px;overflow-y: auto;padding: 0 20px;margin-top: 10px;\">\\\n\t\t<table class=\"table table-hover\" style=\"table-layout: fixed;\">\\\n\t\t\t<tbody>\\\n\t\t\t\t$$\\\n\t\t\t</tbody>\\\n\t\t</table>\\\n\t</div>\\\n</div></div>';\nif(datasources[\"hotoa_pending\"].data.length > 0){\n    var listValue = datasources[\"hotoa_pending\"].data.map(function(instance,index){\n        if(index<5){\n            if(instance.is_read == false){\n                icon = '<i class=\"ion ion-record\" style=\"font-size:80%;position:absolute;top:5px;left:-10px;color:#1f95ec;\"></i>';\n            }else{\n                icon = '';\n            }\n            if(instance.values){\n                if(instance.values.priority == \"办文\"){\n                    contentp = '<a class=\"instance\" style=\"display:inline-block;width:100%;margin-left:7px;color:blue;vertical-align: bottom;cursor: pointer;\" data-href=\"/workflow/space/'+instance.space_id+'/inbox/'+instance.id+'\" target=\"_parent\">'+instance.name+'</a>';   \n                }else if(instance.values.priority == \"紧急\"){\n                    contentp = '<a class=\"instance\" style=\"display:inline-block;width:100%;margin-left:7px;color:purple;vertical-align: bottom;cursor: pointer;\" data-href=\"/workflow/space/'+instance.space_id+'/inbox/'+instance.id+'\">'+instance.name+'</a>';   \n                }else if(instance.values.priority == \"特急\"){\n                    contentp = '<a class=\"instance\" style=\"display:inline-block;width:100%;margin-left:7px;color:red;vertical-align: bottom;cursor: pointer;\" data-href=\"/workflow/space/'+instance.space_id+'/inbox/'+instance.id+'\">'+instance.name+'</a>';   \n                }else{\n                    contentp = '<a class=\"instance\" style=\"display:inline-block;width:100%;margin-left:7px;vertical-align: bottom;cursor: pointer;\" data-href=\"/workflow/space/'+instance.space_id+'/inbox/'+instance.id+'\">'+instance.name+'</a>';\n                }\n            }else{\n                contentp = '<a style=\"display:inline-block;width:120px;margin-left:7px;cursor: pointer;\" data-href=\"/workflow/space/'+instance.space_id+'/inbox/'+instance.id+'\">'+instance.name+'</a>';\n            }\n            modified = moment(instance.modified).format(\"MM-DD HH:mm\");\n            return '<tr>\\\n                    <td style=\"width:68%;padding: 10px 8px;\"><div style=\"position:relative\">'+icon+contentp+'</div></td>\\\n                    <td style=\"\">\\\n                         <a class=\"instance\" style=\"display:inline-block;width:100%;text-align: right;cursor: pointer;\" data-href=\"/workflow/space/'+instance.space_id+'/inbox/'+instance.id+'\">'+modified+'</a>\\\n                    </td>\\\n                </tr>';\n        }\n    })\n}else{\n    var listValue = ['<tr><td style=\"text-align:center;color:#333;cursor: default;\">暂无待办公文</td></tr>'];\n}\n\nif(datasources[\"events\"].data.length>0){\n    var data = datasources[\"events\"].data;\n    data.reverse();\n    var calendarListValue = data.map(function(event,index){\n        if(index<5){\n            if(event.site){\n                site = event.site\n            }else{\n                site = \"\"\n            }\n         \tvar today = moment().format(\"YYYY-MM-DD 00:00\");\n            var tomorrow = moment(today).add(24,\"hours\").format(\"YYYY-MM-DD 00:00\")\n            today = moment(today).format(\"MM-DD\");\n            tomorrow = moment(tomorrow).format(\"MM-DD\");\n            var start = moment(event.start).format(\"MM-DD\")\n            if(start == today){\n                start = moment(event.start).format(\"今天 HH:mm\")\n                return '<tr>\\\n                            <td style=\"width:68%;padding: 10px 8px;\"><div style=\"position:relative\"><a class=\"event\" style=\"display:inline-block;width:100%;vertical-align: bottom;cursor: pointer;\" data-href=\"TGQNeBymyLapyxsSC\">'+event.title+'</a></div></td>\\\n                            <td style=\"\"><a class=\"event\" style=\"display:inline-block;width:100%;text-align: right;color: orange;cursor: pointer;\" data-href=\"TGQNeBymyLapyxsSC\">'+start+'</a></td>\\\n                        </tr>';\n                \n            }else if(start == tomorrow){\n                start = moment(event.start).format(\"明天 HH:mm\")\n                return '<tr>\\\n                            <td style=\"width:68%;padding: 10px 8px;\"><div style=\"position:relative\"><a class=\"event\" style=\"display:inline-block;width:100%;vertical-align: bottom;cursor: pointer;\" data-href=\"TGQNeBymyLapyxsSC\">'+event.title+'</a></div></td>\\\n                            <td style=\"\"><a class=\"event\" style=\"display:inline-block;width:100%;text-align: right;cursor: pointer;\" data-href=\"TGQNeBymyLapyxsSC\" target=\"_parent\">'+start+'</a></td>\\\n                        </tr>';\n            }else{\n                start = moment(event.start).format(\"MM-DD HH:mm\")\n                return '<tr>\\\n                            <td style=\"width:68%;padding: 10px 8px;\"><div style=\"position:relative\"><a class=\"event\" style=\"display:inline-block;width:100%;vertical-align: bottom;cursor: pointer;\" data-href=\"TGQNeBymyLapyxsSC\">'+event.title+'</a></div></td>\\\n                            <td style=\"\"><a class=\"event\" style=\"display:inline-block;width:100%;text-align: right;cursor: pointer;\" data-href=\"TGQNeBymyLapyxsSC\">'+start+'</a></td>\\\n                        </tr>';\n            }\n        }\n    })\n}else{\n    var calendarListValue = ['<tr><td style=\"text-align:center;color:#333;cursor: default;\">暂无工作安排</td></tr>'];\n}\nsetTimeout(function(){\n    var section = section = $(\".callout-success\").closest(\".sub-section\");\n    $(section).css({\"border\":\"none\",\"margin-top\":\"-35px\"});\n    $(\".instance\").on(\"click\",function(){\n        href = $(this).data(\"href\");\n        window.parent.FlowRouter.go(href);\n    })\n    $(\".event\").on(\"click\",function(){\n        href = $(this).data(\"href\");\n        Steedos.openApp(href);\n    })\n},10)\nreturn reValue.replace(\"%%\",listValue.join(\"\")).replace(\"$$\",calendarListValue.join(\"\"))",
+						"height": 5
+					}
+				},
+				{
+					"type": "html",
+					"settings": {
+						"html": "var html = '<a class=\"digtal\" data-appid=\"rQR726zgtuBG2E6Fo\" style=\"width: 31.833333333333%;margin: 25px 0.5% 0 1%;float:left;cursor:pointer;\">\\\n    <div class=\"card card-product\" data-count=\"14\">\\\n        <div class=\"card-image\" data-header-animation=\"true\">\\\n\t\t\t<div style=\"height:100px;background:url('+\"/api/files/posts/nZwT7kJ8bmn8siwCn/3.jpg\"+') no-repeat center\" class=\"img\"></div>\\\n        <div class=\"ripple-container\"></div></div>\\\n        <div class=\"card-content\" style=\"padding: 2px 20px;\">\\\n            <h4 class=\"card-title\" style=\"color:#333;font-size: 17px;font-weight: bold;width: 100%;font-family:-apple-system, BlinkMacSystemFont, Helvetica, Arial, Microsoft Yahei, SimHei;\">\\\n                数字港口\\\n            </h4>\\\n        </div>\\\n    </div>\\\n</a>\\\n<a class=\"port\" data-url=\"http://www.porthebei.com/\" style=\"width: 31.833333333333%;margin: 25px 0.5% 0 1%;float:left;\" target=\"_blank\">\\\n    <div class=\"card card-product\" data-count=\"14\">\\\n        <div class=\"card-image\" data-header-animation=\"true\">\\\n\t\t\t<div style=\"height:100px;background:url('+\"/api/files/posts/7P6ty3zEBgsmG4nmb/2.jpg\"+') no-repeat center\" class=\"img\"></div>\\\n        <div class=\"ripple-container\"></div></div>\\\n        <div class=\"card-content\" style=\"padding: 2px 20px;\">\\\n            <h4 class=\"card-title\" style=\"color:#333;font-size: 17px;font-weight: bold;width: 100%;font-family:-apple-system, BlinkMacSystemFont, Helvetica, Arial, Microsoft Yahei, SimHei;\">\\\n                集团公司网站\\\n            </h4>\\\n        </div>\\\n    </div>\\\n</a>\\\n<a class=\"port\" data-url=\"http://portqhd.com/html/index.php\" style=\"width: 31.833333333333%;margin: 25px 0.5% 0 1%;float:left;\" target=\"_blank\">\\\n    <div class=\"card card-product\" data-count=\"14\">\\\n        <div class=\"card-image\" data-header-animation=\"true\">\\\n\t\t\t<div style=\"height:100px;background:url('+\"/api/files/posts/eA3Hd6pkDACheiTh9/1.jpg\"+') no-repeat center\" class=\"img\"></div>\\\n        <div class=\"ripple-container\"></div></div>\\\n        <div class=\"card-content\" style=\"padding: 2px 20px;\">\\\n            <h4 class=\"card-title\" style=\"color:#333;font-size: 17px;font-weight: bold;width: 100%;font-family:-apple-system, BlinkMacSystemFont, Helvetica, Arial, Microsoft Yahei, SimHei;\">\\\n                股份公司网站\\\n            </h4>\\\n        </div>\\\n    </div>\\\n</a>';\n\nsetTimeout(function(){\n    $(\".digtal\").on(\"click\",function(){\n     \tappid = $(this).data(\"appid\");\n        Steedos.openApp(appid);\n    })\n    $(\".port\").on(\"click\",function(){\n        url = $(this).data(\"url\");\n        Steedos.openUrlWithIE(url);\n    })\n},100)\nsetTimeout(function(){\n    var section = section = $(\".card-product\").closest(\".sub-section\");\n    $(section).css({\"border\":\"none\",\"margin-top\":\"-34px\"});\n    var $ul = $(section).closest(\"ul\");\n    ul = $ul[0];\n    ul.style.cssText = \"position:initial !important\";\n    var gridster = document.getElementsByClassName(\"gridster\")[0];\n    gridster.style.cssText = \"position:initial !important\";\n},100);\nreturn html;",
+						"height": 4
+					}
+				}
+			]
+		},
+		{
+			"title": "",
+			"width": 1,
+			"row": {
+				"2": 27,
+				"3": 27,
+				"4": 1,
+				"5": 1,
+				"6": 1,
+				"7": 1,
+				"8": 1,
+				"9": 1,
+				"10": 1,
+				"11": 1,
+				"12": 1
+			},
+			"col": {
+				"2": 1,
+				"3": 2,
+				"4": 1,
+				"5": 5,
+				"6": 5,
+				"7": 5,
+				"8": 5,
+				"9": 5,
+				"10": 5,
+				"11": 5,
+				"12": 5
+			},
+			"col_width": "1",
+			"widgets": [
+				{
+					"type": "html",
+					"settings": {
+						"html": "var reValue = '<div class=\"sidebar siderbar-apps\" data-color=\"green\" style=\"position: absolute;z-index:0;background: #fff;border-radius: 3px;left:0px;width:230px;bottom:0;box-shadow:0 0px 0px 0px rgba(0, 0, 0, 0.42), 0 0px 1px 0px rgba(0, 0, 0, 0.12), 0 5px 16px -5px rgba(0, 0, 0, 0.2)\">\\\n\t<div class=\"logo\" style=\"padding:9px 15px;float: left;width: 200px;\">\\\n\t\t<a style=\"float: left;width: 92%;\">\\\n\t\t\t<img class=\"media-object\" alt=\"\" src=\"\" style=\"width:35px;height: 35px;border-radius: 50%;margin-left: 4px;float: left\">\\\n\t\t\t<p class=\"text-overflow\" style=\"color:#333;float: left;position:relative;margin-left:10px;bottom:0px;font-size: 16px;width:124px;\">%%</p>\\\n\t\t</a>\\\n\t</div>\\\n        <div class=\"sidebar-wrapper\" style=\"height:auto;\">\\\n            <ul class=\"nav\" style=\"margin-top: 10px;margin-left: -35px;width:230px;\">\\\n                @@\\\n            </ul>\\\n        </div>\\\n</div>';\n\nvar listValue = datasources[\"hotoa_apps\"].data.map(function(app){\n    \tif(app.url==\"/dashboard\"){\n            return ''\n        }\n        if(app._id==\"workflow\"&&Steedos.getBadge(\"workflow\")>0){\n            return '<li>\\\n                <a href=\"www.baidu.com\" target=\"_blank\" data-appid=\"'+app._id+'\" style=\"float: left;width: 191px;margin: 0;padding: 4px 15px;cursor: pointer;\" target=\"_parent\">\\\n                    <i style=\"font-size: 31px;\" class=\"ion '+ app.icon +'\"></i>\\\n                    <p style=\"font-size: 15px;\">'+app.name+'<span class=\"label label-danger\" style=\"margin-top: 7px;float: right;margin-right: 5px;overflow: hidden;display: inline;padding: .2em .6em .3em;font-size: 75%;font-weight: 700;line-height: 1;color: #fff;text-align: center;white-space: nowrap;vertical-align: baseline;border-radius: .25em;\">'+Steedos.getBadge(\"workflow\")+'</span></p>\\\n                </a>\\\n            </li>'\n        }else if(app._id==\"cms\"&&Steedos.getBadge(\"cms\")>0){\n            return '<li>\\\n                <a class=\"open-app\" data-appid=\"'+app._id+'\" style=\"float: left;width: 191px;margin: 0;padding: 4px 15px;cursor: pointer;\" target=\"_parent\">\\\n                    <i style=\"font-size: 31px;\" class=\"ion '+ app.icon +'\"></i>\\\n                    <p style=\"font-size: 15px;\">'+app.name+'<span class=\"label label-warning\" style=\"margin-top: 7px;float: right;margin-right: 5px;overflow: hidden;display: inline;padding: .2em .6em .3em;font-size: 75%;font-weight: 700;line-height: 1;color: #fff;text-align: center;white-space: nowrap;vertical-align: baseline;border-radius: .25em;\">'+Steedos.getBadge(\"cms\")+'</span></p>\\\n                </a>\\\n            </li>'\n        }else{\n            return '<li>\\\n                <a class=\"open-app\" data-appid=\"'+app._id+'\" style=\"float: left;width: 191px;margin: 0;padding: 4px 15px;cursor: pointer;\" target=\"_parent\">\\\n                    <i style=\"font-size: 31px;\" class=\"ion '+ app.icon +'\"></i>\\\n                    <p style=\"font-size: 15px;\">'+app.name+'</p>\\\n                </a>\\\n            </li>';\n        }\n})\n\nvar data = datasources[\"user_info\"];\nvar name = data.dsInfo.name;\nvar id = data.userId;\nvar url = \"/avatar/\"+id;\n\nsetTimeout(function(){\n    sub = $(\".siderbar-apps\").closest(\".sub-section\")\n    section = $(\".siderbar-apps\").closest(\"section\");\n    $(sub).css({\"height\":\"100%\"});\n    $(section).css({\"height\":\"100%\"})\n\tli = $(\".siderbar-apps\").closest(\"section\").prev().parent();\n    $(li).css({\"left\":\"0\",\"top\":\"0\",\"position\":\"fixed\",\"height\":\"100%\"});\n    header = $(\".siderbar-apps\").closest(\"section\").prev();\n    $(header).css(\"display\",\"none\");\n    $(\".media-object\").attr(\"src\",url);\n    $(\".open-app\").on(\"click\",function(){\n        appid = $(this).data(\"appid\");\n        Steedos.openApp(appid);\n    })\n},100)\nreturn reValue.replace(\"%%\",name).replace(\"@@\",listValue.join(\"\")); ",
+						"height": 9
+					}
+				}
+			]
+		},
+		{
+			"width": 1,
+			"row": {
+				"2": 27,
+				"3": 27,
+				"4": 27,
+				"5": 11,
+				"6": 11
+			},
+			"col": {
+				"2": 2,
+				"3": 1,
+				"4": 4,
+				"5": 1,
+				"6": 1
+			},
+			"col_width": "1",
+			"widgets": [
+				{
+					"type": "html",
+					"settings": {
+						"html": "content = '<center><h1 id=\"qhd-title\" style=\"font-size:15px;font-family: 华文仿宋,仿宋;color:#fff;\"></h1></center>';\nsetTimeout(function(){\n    var element = document.getElementsByTagName(\"body\")[0].style.cssText=\"background:rgba(238, 238, 238, 0.80) !important;\";\n     $(\".light .ready .gs_w:not(.preview-holder)\").css({\"background\":\"transparent\",\"box-shadow\":\"none\"});\n     $(\".light .ready .gs_w:not(.preview-holder) header\").css({\"background\":\"transparent\",\"border\":\"none\"});\n     var content = window.parent.document.getElementsByClassName(\"dashboard-content\")[0];\n     window.parent.PerfectScrollbar.initialize(content,{suppressScrollY:true});\n},1)\nsetTimeout(function(){  \n     header = $(\"h1#qhd-title\").closest(\"section\").prev();\n     li = header.parent();\n     li.css({\"left\":\"300px\",\"background\":\"red\"});\n     $(li).hide();\n     htmlWidget = $(\"h1#qhd-title\").closest(\".html-widget\");\n     $(htmlWidget).css(\"overflow\",\"visible\");\n     window.parent.document.getElementsByTagName(\"iframe\")[0].style.cssText = \"min-width:0px\";\n},1) \n$(window).resize(function(){\n    li = $(\".list-apps\").closest(\"section\").prev().parent();\n    width = $(\"div#board-content\").width()-238;\n    li.css({\"width\":width+\"px\"});\n})\nsetTimeout(function(){\n    if(Steedos.isPad() || $(\"body\").width()<821){\n        zoom = 1;\n    }else{\n        zoom = localStorage.getItem(\"accountZoomValue.size\");\n    }\n    $(\"body\").css(\"zoom\",zoom);\n    var width = $(\"div#board-content\").width()-240;\n\tli = $(\".list-apps\").closest(\"section\").prev().parent();\n    li.css({\"left\":\"233px\",\"width\":width+\"px\",\"margin-top\":\"-93px\"});\n},500)\nreturn content",
+						"height": 1
+					}
+				}
+			]
+		}
+	],
+	"datasources": [
+		{
+			"name": "hotoa_pending",
+			"type": "JSON",
+			"settings": {
+				"url": "/api/workflow/open/pending?state=pending&limit=5",
+				"use_thingproxy": true,
+				"refresh": 30000,
+				"method": "GET",
+				"headers": [
+					{
+						"name": "ABC",
+						"value": "ABC"
+					},
+					{
+						"name": "X-User-Id",
+						"value": "rmMhM4MMM8FHKSSqH"
+					},
+					{
+						"name": "X-Auth-Token",
+						"value": "5pjgIHz2PCxlWHDzCbvJPs9_ZmUo9SdIhc8P0CmTpXP"
+					},
+					{
+						"name": "X-Space-Id",
+						"value": "Af8eM6mAHo7wMDqD3"
+					},
+					{
+						"name": "X-User-Id",
+						"value": "rmMhM4MMM8FHKSSqH"
+					},
+					{
+						"name": "X-Auth-Token",
+						"value": "5pjgIHz2PCxlWHDzCbvJPs9_ZmUo9SdIhc8P0CmTpXP"
+					},
+					{
+						"name": "X-Space-Id",
+						"value": "Af8eM6mAHo7wMDqD3"
+					}
+				]
+			}
+		},
+		{
+			"name": "hotoa_cms_unreads",
+			"type": "JSON",
+			"settings": {
+				"url": "/api/cms/unread_posts",
+				"use_thingproxy": false,
+				"refresh": 300000,
+				"method": "GET",
+				"headers": [
+					{
+						"name": "X-User-Id",
+						"value": "rmMhM4MMM8FHKSSqH"
+					},
+					{
+						"name": "X-Auth-Token",
+						"value": "5pjgIHz2PCxlWHDzCbvJPs9_ZmUo9SdIhc8P0CmTpXP"
+					},
+					{
+						"name": "X-Space-Id",
+						"value": "Af8eM6mAHo7wMDqD3"
+					}
+				]
+			}
+		},
+		{
+			"name": "hotoa_apps",
+			"type": "JSON",
+			"settings": {
+				"url": "/api/get/apps",
+				"use_thingproxy": false,
+				"refresh": 600000,
+				"method": "GET",
+				"headers": [
+					{
+						"name": "X-User-Id",
+						"value": "rmMhM4MMM8FHKSSqH"
+					},
+					{
+						"name": "X-Auth-Token",
+						"value": "5pjgIHz2PCxlWHDzCbvJPs9_ZmUo9SdIhc8P0CmTpXP"
+					},
+					{
+						"name": "X-Space-Id",
+						"value": "Af8eM6mAHo7wMDqD3"
+					}
+				]
+			}
+		},
+		{
+			"name": "events",
+			"type": "JSON",
+			"settings": {
+				"url": "/calendar/api/calendar/events",
+				"use_thingproxy": true,
+				"refresh": 300,
+				"method": "GET",
+				"headers": [
+					{
+						"name": "X-User-Id",
+						"value": "rmMhM4MMM8FHKSSqH"
+					},
+					{
+						"name": "X-Auth-Token",
+						"value": "5pjgIHz2PCxlWHDzCbvJPs9_ZmUo9SdIhc8P0CmTpXP"
+					},
+					{
+						"name": "X-Space-Id",
+						"value": "Af8eM6mAHo7wMDqD3"
+					}
+				],
+				"name": "events"
+			}
+		},
+		{
+			"name": "user_info",
+			"type": "JSON",
+			"settings": {
+				"url": "/api/setup/validate",
+				"use_thingproxy": true,
+				"refresh": 300000,
+				"method": "POST",
+				"headers": [
+					{
+						"name": "X-User-Id",
+						"value": "rmMhM4MMM8FHKSSqH"
+					},
+					{
+						"name": "X-Auth-Token",
+						"value": "5pjgIHz2PCxlWHDzCbvJPs9_ZmUo9SdIhc8P0CmTpXP"
+					},
+					{
+						"name": "X-Space-Id",
+						"value": "Af8eM6mAHo7wMDqD3"
+					}
+				]
+			}
+		}
+	],
+	"columns": 4
+} 
